@@ -181,36 +181,6 @@ body {
       transform: scale(1);
     }
   }
-
-  /* Landing hero: gentle float on the 3D device mockups (same keyframes,
-     offset phase so the laptop and phone drift independently). */
-  --animate-hero-float: hero-float 7s ease-in-out infinite;
-  --animate-hero-float-phone: hero-float 5.5s ease-in-out 1.2s infinite;
-
-  @keyframes hero-float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  /* Hero primary CTA: a soft ring breathing outward, as if waiting on the
-     visitor's click. box-shadow only-transform stays free for the hover
-     scale, so the two never fight. */
-  --animate-cta-pulse: cta-pulse 2.4s ease-in-out infinite;
-
-  @keyframes cta-pulse {
-    0%,
-    100% {
-      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.45);
-    }
-    50% {
-      box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
-    }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -235,15 +205,5 @@ body {
   .animate-network-signal {
     animation: none;
     opacity: 0;
-  }
-
-  .animate-hero-float,
-  .animate-hero-float-phone {
-    animation: none;
-  }
-
-  .animate-cta-pulse {
-    animation: none;
-    box-shadow: none;
   }
 }

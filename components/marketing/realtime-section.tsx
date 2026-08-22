@@ -1,6 +1,6 @@
 export function RealtimeSection() {
   return (
-    <section className="border-t border-border-subtle bg-surface/40 px-6 py-20">
+    <section id="realtime-demo" className="border-t border-border-subtle bg-surface/40 px-6 py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
         <div className="flex flex-col gap-4">
           <span className="text-xs font-medium uppercase tracking-wide text-accent-hover">
