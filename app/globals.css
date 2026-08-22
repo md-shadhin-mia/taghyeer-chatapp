@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --background: #0b0e14;
+  --foreground: #f3f5f8;
+  --surface: #161b26;
+  --surface-elevated: #1b2130;
+  --border-subtle: #232936;
+  --muted: #8b93a3;
+  --muted-dim: #5b6273;
+  --accent-from: #3b82f6;
+  --accent-to: #3b82f6;
+  --accent-hover: #60a5fa;
+  --danger: #f87171;
+  --danger-bg: rgba(239, 68, 68, 0.12);
+  --inset: #0f1420;
+  --scrollbar-thumb: rgba(139, 147, 163, 0.28);
+  --scrollbar-thumb-hover: rgba(139, 147, 163, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-border-subtle: var(--border-subtle);
+  --color-muted: var(--muted);
+  --color-muted-dim: var(--muted-dim);
+  --color-accent-from: var(--accent-from);
+  --color-accent-to: var(--accent-to);
+  --color-accent-hover: var(--accent-hover);
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+  --color-inset: var(--inset);
+  --font-sans: var(--font-manrope);
+  --font-mono: ui-monospace, monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbars — the platform default is a light, chunky bar that fights the dark
+   surfaces. Style every scroll container globally (message list, sidebar, modals,
+   member lists, the composer textarea) so they read as part of the UI.
+   Kept in @layer base so utilities like scrollbar-none can override them —
+   unlayered rules would beat @layer utilities regardless of specificity. */
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    /* Transparent border + background-clip inset the thumb, so it reads as a thin
+       pill with breathing room instead of filling the full gutter width. */
+    background-color: var(--scrollbar-thumb);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
+
+  *::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+/* Hide the scrollbar entirely while keeping the element scrollable
+   (e.g. the composer textarea, where a visible bar crowds the small box). */
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@theme {
+  /* Staggered dots shown on a message bubble while it is being sent. */
+  --animate-sending-dot: sending-dot 1.1s infinite ease-in-out;
+
+  /* One-shot entrance for a message that arrived while the chat was open.
+     Only opacity/transform — never layout properties — so the scroll math in
+     use-auto-scroll.ts (which reads scrollHeight) is unaffected. */
+  --animate-message-pop: message-pop 0.18s ease-out;
+
+  @keyframes sending-dot {
+    0%,
+    70%,
+    100% {
+      opacity: 0.25;
+      transform: translateY(0);
+    }
+    35% {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Landing page: the dot travelling along the realtime-section connector. */
+  --animate-connector-travel: connector-travel 1.1s ease-in-out forwards;
+
+  /* Landing page: blinking caret in the scripted search demo. */
+  --animate-caret-blink: caret-blink 1s steps(1) infinite;
+
+  @keyframes connector-travel {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(112px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes caret-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes message-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sending-dot {
+    animation: none;
+    opacity: 0.6;
+  }
+
+  .animate-message-pop {
+    animation: none;
+  }
+
+  .animate-connector-travel {
+    animation: none;
+    opacity: 0;
+  }
+
+  .animate-caret-blink {
+    animation: none;
+  }
+}
