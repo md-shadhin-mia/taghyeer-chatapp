@@ -13,7 +13,6 @@ Real-time 1-on-1 and group chat with phone-number auth, Socket.IO realtime, unre
 - [Setup](#setup)
 - [Environment variables](#environment-variables)
 - [Architecture](#architecture)
-- [Landing page design rationale](#landing-page-design-rationale)
 - [API usage](#api-usage)
 - [Deployment](#deployment)
 - [Implementation decisions](#implementation-decisions)
@@ -78,17 +77,6 @@ Socket.IO patches React Query cache on `message:new` instead of refetching. Send
 
 Scrolls to bottom on load, auto-scrolls on new messages only if already near bottom. Never forces scroll if user has scrolled up to read history.
 
-## Landing page design rationale
-
-*Explain the reasoning behind your visual and UX design choices for the landing page (layout, color palette, typography, interactions).*
-
-The page is built to demonstrate the product live rather than describe it in prose.
-
-- **Layout**: Two-column hero (copy left, live device mockup right) so the realtime demo sits next to the pitch instead of below the fold.
-- **Color palette**: Reuses the app's own dark theme and single blue accent instead of a separate marketing palette, so the page feels continuous with `/login` and `/chat`.
-- **Typography**: Manrope everywhere for the same continuity, with a large tight-tracked headline and small muted supporting copy so the live conversation stays the focal point.
-- **Interactions**: Motion demonstrates real product behavior (messages entering, typing indicators, delivery ticks, a pulsing CTA) and is gated by `prefers-reduced-motion` and viewport visibility.
-
 ## API usage
 
 Full endpoint reference in [API.md](./API.md). Group creation uses separate `POST /conversations/group` endpoint (not overloaded on direct endpoint).
@@ -107,7 +95,7 @@ Import to Vercel. No env vars needed for default backend. Build auto-detected as
 - **Failed sends**: stay visible as retryable bubbles (don't silently discard)
 - **No self-echo**: backend doesn't send messages back to sender; list is invalidated instead
 - **Unread**: derived client-side from socket stream (zero extra requests)
-- **Landing page**: scripted demo timelines styled to match the production chat UI (not the stateful components themselves, which need real conversation data)
+- **Landing page**: reuses production chat components with scripted demo timeline
 
 ## Known limitations
 
