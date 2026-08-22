@@ -89,7 +89,7 @@ The page is built to demonstrate the product live rather than describe it in pro
 
 ## API usage
 
-Full endpoint reference in [API.md](./API.md). Group creation uses separate `POST /conversations/group` endpoint (not overloaded on direct endpoint).
+I reviewed all API endpoints in Swagger, copied their responses, and used them to create [API.md](./API.md). Group creation uses a separate `POST /conversations/group` endpoint (not the direct-conversation endpoint).
 
 ## Deployment
 
