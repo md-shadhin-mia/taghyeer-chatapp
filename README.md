@@ -2,7 +2,7 @@
 
 Real-time 1-on-1 and group chat with phone-number auth, Socket.IO realtime, unread notifications, draft saving, and intelligent auto-scroll.
 
-**Live demo:** _add your deployed URL here_  
+**Live demo:** [Live Link - Click Here](https://taghyeer-chat.netlify.app/)
 **API docs:** [API.md](./API.md)
 
 ---
