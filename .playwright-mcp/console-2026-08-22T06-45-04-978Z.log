@@ -1,0 +1,752 @@
+[     155ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     182ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   27021ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   27041ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   27087ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   27200ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <LandingPage>
+                <div className="min-h-0 fl...">
+                  <LandingNav>
+                  <main>
+                    <LandingHero>
+                      <section aria-labelledby="hero-heading" className="relative m...">
+                        <div>
+                        <div className="relative">
+                          <p>
+                          ...
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(18px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(18px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(18px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                            <motion.span aria-hidden="true" className="inline-blo..." variants={{hidden:{...}, ...}}>
+                              <span
+                                aria-hidden="true"
+                                className="inline-block whitespace-pre"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 filter: "blur(0px)"
+-                                 filter: "blur(10px)"
++                                 transform: "none"
+-                                 transform: "translateX(10px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                          ...
+                        <LazyMotion features={{...}} strict={true}>
+                          <motion.div className="relative" initial={{opacity:0,y:0}} animate={{opacity:1,y:0}} ...>
+                            <div
+                              className="relative"
+                              style={{
++                               opacity: 0
+-                               opacity: "0"
++                               transform: "none"
+-                               transform: "translateY(24px)"
+                              }}
+                              ref={function useMotionRef.useCallback}
+                            >
+                    ...
+                      <section id="realtime" aria-labelledby="realtime-h..." className={"relative..."}>
+                        <SectionHeading headingId="realtime-h..." eyebrow="Realtime" title="Instant, b..." ...>
+                          <LazyMotion features={{...}} strict={true}>
+                            <motion.div className="max-w-2xl ..." initial={{opacity:0,y:0}} whileInView={{opacity:1,y:0}} ...>
+                              <div
+                                className="max-w-2xl mx-auto text-center"
+                                style={{
++                                 opacity: 0
+-                                 opacity: "0"
++                                 transform: "none"
+-                                 transform: "translateY(16px)"
+                                }}
+                                ref={function useMotionRef.useCallback}
+                              >
+                        <div ref={{current:null}} role="img" aria-label="Diagram: a..." className="mx-auto mt...">
+                          <div className="flex flex-...">
+                            <MiniDeviceCard name="Amira Hassan" align="left">
+                              <div className="w-full max...">
+                                <div>
+                                <div className="min-h-[46px]">
+                                  <div className="flex justi...">
+                                    <div
++                                     className="rounded-[16px] rounded-br-[4px] bg-accent-from px-[15px] py-[11px] te..."
+-                                     className="rounded-[16px] rounded-br-[4px] bg-accent-from px-[15px] py-[11px] te..."
+                                    >
++                                     Shipped it 🚀
+                            <div className="hidden md:..." aria-hidden={true}>
+                              <Connector active={false} reduced={true}>
+                                <LazyMotion features={{...}} strict={true}>
+                                  <svg width="120" height="24" viewBox="0 0 120 24" fill="none" className="text-accen...">
+                                    <motion.path d="M2 12 H118" stroke="currentColor" strokeOpacity="0.25" ...>
+                                      <path
+                                        d="M2 12 H118"
+                                        stroke="currentColor"
+                                        strokeOpacity="0.25"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        pathLength={1}
+                                        strokeDashoffset="0"
++                                       strokeDasharray="1 1"
+-                                       strokeDasharray="0 1"
+                                        style={{}}
+                                        ref={function useMotionRef.useCallback}
+                                      >
+-                                   <circle r="4" cx="4" cy="12" fill="currentColor" className="opacity-0">
+                            ...
+                          ...
+                        ...
+                    ...
+                  ...
+            ...
+          ...
+
+    at throwOnHydrationMismatch (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3120:56)
+    at popHydrationState (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3205:13)
+    at completeWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6749:25)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at completeUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9452:23)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9387:28)
+    at workLoopConcurrentByScheduler (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9381:58)
+    at renderRootConcurrent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9364:71)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8891:150)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10085:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+[  105094ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  105141ms] [LOG] [Fast Refresh] done in 23ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  105180ms] [LOG] [Fast Refresh] done in 23ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  112084ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  112145ms] [LOG] [Fast Refresh] done in 42ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  113484ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  113525ms] [LOG] [Fast Refresh] done in 17ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  113564ms] [LOG] [Fast Refresh] done in 17ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  114906ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  114947ms] [LOG] [Fast Refresh] done in 8ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  115002ms] [LOG] [Fast Refresh] done in 8ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  117066ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  117144ms] [LOG] [Fast Refresh] done in 46ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  118538ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  118611ms] [LOG] [Fast Refresh] done in 1ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  119544ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  119587ms] [LOG] [Fast Refresh] done in 11ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  119627ms] [LOG] [Fast Refresh] done in 11ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  124725ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  124814ms] [LOG] [Fast Refresh] done in 62ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  124836ms] ReferenceError: useReducedMotion is not defined
+    at RealtimeSection (http://localhost:3000/_next/static/chunks/_1pwl1v0._.js?id=%255Bproject%255D/components/marketing/realtime-section.tsx+%255Bapp-client%255D+(ecmascript):46:21)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:14894:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4425:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:5892:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6493:540)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9279:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9263:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8928:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10093:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10009:316)
+    at processRootScheduleInMicrotask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10030:106)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10104:158
+[  124916ms] [LOG] [Fast Refresh] done in 62ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127549ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127557ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127702ms] [LOG] [Fast Refresh] done in 101ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127888ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127908ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  127948ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  128057ms] Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <main>
+      <LandingHero>
+      <RealtimeSection>
+      <GroupsSection>
+      <SearchDemoSection>
+        <Section labelledBy="search-hea...">
+          <section id={undefined} aria-labelledby="search-hea..." className={"relative..."}>
+            <SectionHeading>
+            <div ref={{current:null}} role="img" aria-label="Demo of se..." onMouseEnter={function onMouseEnter} ...>
+              <LazyMotion features={{...}} strict={true}>
+                <AnimatePresence mode="wait" initial={false}>
+                  <PresenceChild isPresent={true} initial={false} custom={undefined} presenceAffectsLayout={true} ...>
+                    <PopChild pop={false} isPresent={true} anchorX="left" anchorY="top" root={undefined}>
+                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}} pop={false}>
+                        <motion.div initial={{opacity:0, ...}} animate={{opacity:1, ...}} exit={{opacity:0, ...}} ...>
+                          <div style={{opacity:1, ...}} ref={function useMotionRef.useCallback}>
+                            <div
++                             className="flex items-center gap-3 border-b border-border-subtle pb-4"
+-                             className="flex h-12 items-center gap-2.5 rounded-xl border border-border-subtle bg-inse..."
+                            >
+                              <Avatar name="Amira Hassan" size={40}>
++                               <div
++                                 className="flex shrink-0 items-center justify-center rounded-full text-[11px] font-s..."
++                                 style={{width:40,height:40}}
++                                 aria-hidden="true"
++                               >
+-                               <svg
+-                                 className="h-4 w-4 flex-shrink-0 text-muted-dim"
+-                                 viewBox="0 0 24 24"
+-                                 fill="none"
+-                                 stroke="currentColor"
+-                                 stroke-width="1.8"
+-                                 stroke-linecap="round"
+-                                 stroke-linejoin="round"
+-                               >
+                              ...
+                            ...
+      ...
+
+    at throwOnHydrationMismatch (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:3120:56)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6585:918)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopConcurrentByScheduler (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9381:58)
+    at renderRootConcurrent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9364:71)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8891:150)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10085:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+[  128963ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  129012ms] [LOG] [Fast Refresh] done in 11ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  129061ms] [LOG] [Fast Refresh] done in 11ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  129989ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  130062ms] [LOG] [Fast Refresh] done in 11ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  136663ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  136740ms] [LOG] [Fast Refresh] done in 89ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  136770ms] ReferenceError: useReducedMotion is not defined
+    at SearchDemoSection (http://localhost:3000/_next/static/chunks/_0y10p7v._.js?id=%255Bproject%255D/components/marketing/search-demo-section.tsx+%255Bapp-client%255D+(ecmascript):49:21)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:14894:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4425:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:5892:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6493:540)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9279:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9263:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8928:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10093:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10009:316)
+    at processRootScheduleInMicrotask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10030:106)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10104:158
+[  136841ms] [LOG] [Fast Refresh] done in 89ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  138971ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  138978ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  139120ms] [LOG] [Fast Refresh] done in 73ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  139307ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  139333ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  139396ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  170185ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  170220ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  170271ms] [WARNING] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  184141ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  184169ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  186497ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  186534ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  188030ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  188062ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  198857ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  198887ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  271368ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  271403ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  380837ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  380905ms] [LOG] [Fast Refresh] done in 68ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  380946ms] [LOG] [Fast Refresh] done in 68ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  387153ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  387219ms] [LOG] [Fast Refresh] done in 86ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  387253ms] [LOG] [Fast Refresh] done in 86ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  388481ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  388537ms] [LOG] [Fast Refresh] done in 13ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  388578ms] [LOG] [Fast Refresh] done in 13ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  389474ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  389519ms] [LOG] [Fast Refresh] done in 10ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  389560ms] [LOG] [Fast Refresh] done in 10ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  419930ms] [LOG] [Fast Refresh] done in 10ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  420163ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  420193ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  439188ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  439251ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  439338ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  448260ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  448368ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  448396ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  605553ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  605630ms] [LOG] [Fast Refresh] done in 44ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  606927ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  606970ms] [LOG] [Fast Refresh] done in 9ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  607054ms] [LOG] [Fast Refresh] done in 9ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  610264ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  610345ms] [LOG] [Fast Refresh] done in 30ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  635050ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  635091ms] [LOG] [Fast Refresh] done in 94ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  646197ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  646301ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  646360ms] ReferenceError: DemoChatWindow is not defined
+    at LandingHero (http://localhost:3000/_next/static/chunks/_1hrxbm9._.js?id=%255Bproject%255D/components/marketing/landing-hero.tsx+%255Bapp-client%255D+(ecmascript):133:234)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:14894:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4425:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:5892:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6518:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9279:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9263:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8928:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10093:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10009:316)
+    at processRootScheduleInMicrotask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10030:106)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10104:158
+[  646408ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  646469ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  646641ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649033ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649046ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649080ms] ReferenceError: DemoChatWindow is not defined
+    at LandingHero (http://localhost:3000/_next/static/chunks/_1hrxbm9._.js?id=%255Bproject%255D/components/marketing/landing-hero.tsx+%255Bapp-client%255D+(ecmascript):133:234)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:14894:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4425:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:5892:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6493:540)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9279:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9263:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8928:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10093:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10009:316)
+    at flushSyncWork$1 (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9060:86)
+    at Object.scheduleRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:82:13)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:589:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:582:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:137:31)
+    at http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:145:13
+[  649102ms] [LOG] [Fast Refresh] done in 73ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649204ms] [LOG] [Fast Refresh] done in 73ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649263ms] [LOG] [Fast Refresh] done in 73ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649290ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:0
+[  649433ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649508ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  649810ms] ReferenceError: DemoChatWindow is not defined
+    at LandingHero (http://localhost:3000/_next/static/chunks/_1hrxbm9._.js:1860:234)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:14894:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4425:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:5892:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6493:540)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:761:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9385:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9279:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9263:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:8928:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10085:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64)
+[  650690ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  651358ms] [LOG] [Fast Refresh] done in 741ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  651459ms] [LOG] [Fast Refresh] done in 741ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  651977ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  652015ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  682920ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  682945ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  720016ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  720067ms] [LOG] [Fast Refresh] done in 19ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  720208ms] [LOG] [Fast Refresh] done in 19ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  722139ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  722209ms] [LOG] [Fast Refresh] done in 41ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  724639ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  724728ms] [LOG] [Fast Refresh] done in 95ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  733193ms] [LOG] [Fast Refresh] done in 95ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  733375ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  733402ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  758913ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  758972ms] [LOG] [Fast Refresh] done in 70ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  759014ms] [LOG] [Fast Refresh] done in 70ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  768221ms] [LOG] [Fast Refresh] done in 70ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  768341ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  768368ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  930442ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  930467ms] [ERROR] ./components/marketing/hero-device-mockup.tsx:106:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  104 |     </div>
+  105 |   );
+> 106 | }
+      | ^
+  107 |
+  108 | function Phone() {
+  109 |   const scrollRef = useRef<HTMLDivElement>(null);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/marketing/hero-device-mockup.tsx [Client Component Browser]
+    ./components/marketing/landing-hero.tsx [Client Component Browser]
+    ./components/marketing/landing-hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/marketing/hero-device-mockup.tsx [Client Component SSR]
+    ./components/marketing/landing-hero.tsx [Client Component SSR]
+    ./components/marketing/landing-hero.tsx [Server Component]
+    ./app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  930534ms] [ERROR] ./components/marketing/hero-device-mockup.tsx:106:1
+Error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+  104 |     </div>
+  105 |   );
+> 106 | }
+      | ^
+  107 |
+  108 | function Phone() {
+  109 |   const scrollRef = useRef<HTMLDivElement>(null);
+
+Parsing ecmascript source code failed
+
+Import traces:
+  Client Component Browser:
+    ./components/marketing/hero-device-mockup.tsx [Client Component Browser]
+    ./components/marketing/landing-hero.tsx [Client Component Browser]
+    ./components/marketing/landing-hero.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/marketing/hero-device-mockup.tsx [Client Component SSR]
+    ./components/marketing/landing-hero.tsx [Client Component SSR]
+    ./components/marketing/landing-hero.tsx [Server Component]
+    ./app/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  943281ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  943350ms] [LOG] [Fast Refresh] done in 93ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  943435ms] [LOG] [Fast Refresh] done in 93ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  957840ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  957893ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  988159ms] [LOG] [Fast Refresh] done in 109ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  988314ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  988334ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1044914ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1044944ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1052008ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1052027ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1256323ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1256671ms] [LOG] [Fast Refresh] done in 328ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1261446ms] [LOG] [Fast Refresh] done in 328ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1261646ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1262159ms] [LOG] [Fast Refresh] done in 524ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1262327ms] [LOG] [Fast Refresh] done in 524ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1281692ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1281724ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[ 1281863ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <div className="relative" style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+      <HeroDeviceMockup>
+        <div className="relative m...">
+          <Laptop>
+            <div>
+              <div className="rounded-xl...">
+                <div className="overflow-h...">
+                  <div>
+                  <div className="h-[340px] ...">
+                    <div className="flex h-[13...">
+                      <div>
+                      <DemoChatWindow variant="bare" script={[...]} conversation={{_id:"demo-...", ...}} ...>
+                        <div ref={{current:null}} className="flex flex-..." onMouseEnter={function onMouseEnter} ...>
+                          <div>
+                          <MessageComposer conversationId="demo-convo..." disabled={false} isSending={false} ...>
+                            <div className="flex flex-...">
+                              <div className="flex items...">
+                                <button>
+                                <label>
+                                <textarea>
+                                <button
+                                  type="button"
+                                  onClick={function submit}
++                                 disabled={false}
+-                                 disabled=""
+                                  aria-label="Send message"
+                                  title={undefined}
+                                  className="flex h-10 shrink-0 items-center justify-center gap-1.5 rounded-full bg-ac..."
+                                >
+              ...
+          ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052

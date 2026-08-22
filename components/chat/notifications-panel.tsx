@@ -1,33 +1,73 @@
 "use client";
 
+import { Avatar } from "@/components/layout/avatar";
+import { selectUnreadCount, useUnreadStore } from "@/store/unread-store";
+import { conversationTitle } from "@/utils/conversation";
+import type { Conversation } from "@/types/conversation";
+
+function NotificationRow({
+  conversation,
+  onSelectConversation,
+}: {
+  conversation: Conversation;
+  onSelectConversation: (id: string) => void;
+}) {
+  const unreadCount = useUnreadStore(selectUnreadCount(conversation._id));
+  const title = conversationTitle(conversation);
+
+  return (
+    <button
+      onClick={() => onSelectConversation(conversation._id)}
+      className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-left transition-colors hover:bg-border-subtle"
+    >
+      <Avatar name={title} size={28} />
+      <span className="min-w-0 flex-1 truncate text-sm">{title}</span>
+      {unreadCount > 0 && (
+        <span className="flex h-5 min-w-5 flex-shrink-0 items-center justify-center rounded-full bg-accent-to px-1 text-xs font-medium text-white">
+          {unreadCount > 9 ? "9+" : unreadCount}
+        </span>
+      )}
+    </button>
+  );
+}
+
 export function NotificationsPanel({
   conversations,
   onSelectConversation,
   onClose,
 }: {
-  conversations: Array<{ _id: string; participants: string[]; name?: string }>;
+  conversations: Conversation[];
   onSelectConversation: (id: string) => void;
   onClose: () => void;
 }) {
+  const unreadConversations = conversations.filter(
+    (conversation) => conversation.lastMessage !== undefined,
+  );
+
   return (
-    <div className="max-w-md space-y-1">
-      {conversations.map((conversation) => (
-        <div
-          key={conversation._id}
-          onClick={() => onSelectConversation(conversation._id)}
-          className="flex items-center rounded-border px-3 py-2 cursor-pointer hover:bg-border-subtle transition-colors"
-        >
-          {conversation.participants.length > 2 ? (
-            <span className="w-2 h-2 rounded-full bg-accent-to mr-2"></span>
-            {conversation.name || "Group"}
-          ) : (
-            <Avatar name={conversation.participants[0] || "You"} className="w-3 h-3 mr-2" />
-            {conversation.participants.length > 0 ? conversation.participants[0] : "No one"}
-          )}
+    <div className="max-w-sm space-y-1">
+      <h2 className="px-3 pb-1 text-sm font-semibold">Notifications</h2>
+      {unreadConversations.length === 0 ? (
+        <p className="px-3 py-4 text-center text-sm text-muted">Nothing new right now.</p>
+      ) : (
+        <div className="max-h-72 space-y-0.5 overflow-y-auto">
+          {unreadConversations.map((conversation) => (
+            <NotificationRow
+              key={conversation._id}
+              conversation={conversation}
+              onSelectConversation={(id) => {
+                onSelectConversation(id);
+                onClose();
+              }}
+            />
+          ))}
         </div>
-      ))}
-      <button onClick={onClose} className="mt-2 w-full text-xs text-muted rounded-border px-3 py-2 border-border-subtle hover:bg-border-subtle transition-colors">
-        Cancel
+      )}
+      <button
+        onClick={onClose}
+        className="mt-1 w-full rounded-md border border-border-subtle px-3 py-2 text-xs text-muted transition-colors hover:bg-border-subtle"
+      >
+        Close
       </button>
     </div>
   );

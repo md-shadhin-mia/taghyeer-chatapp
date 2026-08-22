@@ -1,42 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useSocket } from "@/hooks/use-socket";
+import { AnimatePresence, motion } from "motion/react";
+import { selectConnectionStatus, useConnectionStore } from "@/store/connection-store";
 
 export function ConnectionBanner() {
-  const { socketConnected, isOffline } = useSocket();
-  const [isConnectionLost, setIsConnectionLost] = useState(false);
+  const status = useConnectionStore(selectConnectionStatus);
 
-  useEffect(() => {
-    const handleOnline = () => setIsConnectionLost(false);
-    const handleOffline = () => setIsConnectionLost(true);
-    const handleSocketConnect = () => setIsConnectionLost(false);
-    const handleSocketDisconnect = () => setIsConnectionLost(true);
+  if (status === "online") return null;
 
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
+  const isOffline = status === "offline";
 
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  }, []);
-
-  if (isOffline) {
-    return (
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-destructive text-white px-4 py-2 rounded text-sm animate-fade-in">
-        Offline
-      </div>
-    );
-  }
-
-  if (isConnectionLost) {
-    return (
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-accent-to text-accent-from px-4 py-2 rounded text-sm animate-fade-in">
-        Connection lost. Attempting to reconnect...
-      </div>
-    );
-  }
-
-  return null;
+  return (
+    <AnimatePresence>
+      <motion.div
+        role="status"
+        initial={{ y: -12, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -12, opacity: 0 }}
+        transition={{ duration: 0.18, ease: "easeOut" }}
+        className={`w-full px-4 py-2 text-center text-sm font-medium ${
+          isOffline ? "bg-danger-bg text-danger" : "bg-accent-to/15 text-accent-hover"
+        }`}
+      >
+        {isOffline
+          ? "Connection lost. Attempting to reconnect..."
+          : "Live updates paused. Messages will still send."}
+      </motion.div>
+    </AnimatePresence>
+  );
 }

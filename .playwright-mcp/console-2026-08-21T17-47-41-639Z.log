@@ -1,0 +1,16 @@
+[     325ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     473ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     621ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     889ms] [LOG] [Fast Refresh] done in 389ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1501ms] [LOG] [auto-scroll] attach effect {hasEl: false, itemCount: 0} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1502ms] [LOG] [auto-scroll] attach effect {hasEl: false, itemCount: 0} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    9280ms] [LOG] [auto-scroll] attach effect {hasEl: true, itemCount: 29} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    9291ms] [LOG] [auto-scroll] evaluateScrollPosition fired {distance: 0, atBottom: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   27092ms] [LOG] [auto-scroll] evaluateScrollPosition fired {distance: 1362, atBottom: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   44695ms] [ERROR] Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `MessageList`.  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[   44716ms] [LOG] [auto-scroll] attach effect {hasEl: true, itemCount: 30} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   75083ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   75154ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   76576ms] [LOG] [auto-scroll] layout effect {prev: null, lastItemId: 6a888f69e5d6aac97523cd85, itemAdded: true, isAtBottom: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

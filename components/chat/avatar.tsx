@@ -1,7 +1,15 @@
 "use client";
 
-import Avatar from "@/components/ui/avatar";
+import { Avatar as BaseAvatar } from "@/components/layout/avatar";
 
-export function Avatar({ name }: { name: string }) {
-  return <Avatar name={name} />;
+export function Avatar({
+  name,
+  size,
+  className,
+}: {
+  name: string;
+  size?: number;
+  className?: string;
+}) {
+  return <BaseAvatar name={name} size={size} className={className} />;
 }

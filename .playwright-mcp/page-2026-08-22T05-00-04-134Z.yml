@@ -1,0 +1,35 @@
+- generic [active] [ref=f28e1]:
+  - alert [ref=f28e4]
+  - status [ref=f28e22]:
+    - generic [ref=f28e24]: Live updates paused. Reconnecting...
+  - generic [ref=f28e25]:
+    - generic [ref=f28e26]:
+      - button "Chats" [ref=f28e30]
+      - button "Dashboard (coming soon)" [disabled] [ref=f28e33]
+      - button "Contacts (coming soon)" [disabled] [ref=f28e39]
+      - button "Notifications (coming soon)" [disabled] [ref=f28e44]
+      - button "Settings (coming soon)" [disabled] [ref=f28e48]
+      - button "Account menu" [ref=f28e53]:
+        - generic [ref=f28e54]: PA
+    - generic [ref=f28e55]:
+      - banner [ref=f28e56]:
+        - generic [ref=f28e57]:
+          - heading "Good morning, Probe" [level=1] [ref=f28e58]
+          - paragraph [ref=f28e59]: Here's what's happening in your inbox today.
+        - generic [ref=f28e60]:
+          - generic [ref=f28e61]: Search conversations
+          - searchbox "Search conversations" [ref=f28e63]
+          - button "Notifications (coming soon)" [disabled] [ref=f28e64]
+      - generic [ref=f28e68]:
+        - generic [ref=f28e69]:
+          - generic [ref=f28e70]:
+            - heading "Conversations" [level=2] [ref=f28e71]
+            - paragraph [ref=f28e72]: No chats yet
+          - generic [ref=f28e73]:
+            - button "+ New Chat" [ref=f28e74]:
+              - generic [ref=f28e75]: +
+              - text: New Chat
+            - button "+ New Group" [ref=f28e76]:
+              - generic [ref=f28e77]: +
+              - text: New Group
+        - paragraph [ref=f28e106]: Select a conversation or start a new one.

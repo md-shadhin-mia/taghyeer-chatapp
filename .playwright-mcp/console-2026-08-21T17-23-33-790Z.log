@@ -1,0 +1,7 @@
+[      66ms] [LOG] [Fast Refresh] done in 74ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     221ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     253ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    4104ms] [ERROR] WebSocket connection to 'wss://frontend-task-chatapp.onrender.com/socket.io/?EIO=4&transport=websocket&sid=ew3p1FmM_33HthjaACQr' failed: Error during WebSocket handshake: Unexpected response code: 520 @ http://localhost:3000/_next/static/chunks/node_modules_0-r49mq._.js:3046
+[   37130ms] [ERROR] Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `MessageList`.  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052

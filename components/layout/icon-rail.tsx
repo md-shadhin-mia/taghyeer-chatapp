@@ -1,11 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { useAuth } from "@/hooks/use-auth";
-import { useConversations } from "@/hooks/use-conversations";
-import { useUnreadStore, selectTotalUnread } from "@/store/unread-store";
 import { Avatar } from "@/components/layout/avatar";
-import { useSocket } from "@/hooks/use-socket";
 
 export function IconRail({
   userName,
@@ -18,50 +13,38 @@ export function IconRail({
   onSignOut: () => void;
   unreadTotal: number;
   isNotificationsOpen: boolean;
-  onToggleNotifications: (open: boolean) => void;
+  onToggleNotifications: () => void;
 }) {
-  const { socketConnected, isOffline } = useSocket();
-  const { conversations } = useConversations();
-  const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    const handleOnline = () => {};
-    const handleOffline = () => {};
-
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
-
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  }, []);
-
   return (
-    <aside
-      className="fixed left-0 top-0 inset-y-auto w-16 bg-background flex flex-col items-center border-r border-border-subtle min-h-screen z-40"
-    >
-      <div className="flex-1 flex flex-col items-center py-4">
+    <aside className="hidden w-16 flex-shrink-0 flex-col items-center border-r border-border-subtle bg-background py-4 md:flex">
+      <div className="flex flex-1 flex-col items-center gap-4">
         <Avatar name={userName} size={36} />
-
-        <div className="mt-2 text-center text-xs text-muted">
-          {userName.split(" ")[0]}
-        </div>
       </div>
 
-      <nav className="mt-6 w-full space-y-1">
-        {conversations.map((conversation) => (
-          <button
-            key={conversation._id}
-            className={`flex items-center justify-center rounded-md px-3 py-2 text-sm ${
-              expanded ? "bg-accent-to" : "text-muted hover:bg-border-subtle transition-colors"
-            }`}
-            onClick={() => setExpanded(!expanded)}
-          >
-            {conversation.participants.length > 2 ? "Group" : "Chats"}
-          </button>
-        ))}
-      </nav>
+      <div className="flex flex-col items-center gap-3">
+        <button
+          onClick={onToggleNotifications}
+          aria-label="Notifications"
+          aria-pressed={isNotificationsOpen}
+          className={`relative rounded-md p-2 transition-colors ${
+            isNotificationsOpen ? "bg-border-subtle" : "text-muted hover:bg-border-subtle hover:text-foreground"
+          }`}
+        >
+          <span aria-hidden>🔔</span>
+          {unreadTotal > 0 && (
+            <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-accent-to px-1 text-[10px] font-medium text-white">
+              {unreadTotal > 9 ? "9+" : unreadTotal}
+            </span>
+          )}
+        </button>
+        <button
+          onClick={onSignOut}
+          aria-label="Sign out"
+          className="rounded-md p-2 text-muted transition-colors hover:bg-border-subtle hover:text-foreground"
+        >
+          <span aria-hidden>⏻</span>
+        </button>
+      </div>
     </aside>
   );
 }

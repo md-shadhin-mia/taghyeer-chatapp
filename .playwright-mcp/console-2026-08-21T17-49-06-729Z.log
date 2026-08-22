@@ -1,0 +1,23 @@
+[      54ms] [LOG] [Fast Refresh] done in 50ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     263ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     291ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1231ms] [LOG] [auto-scroll] attach effect {hasEl: false, itemCount: 0} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    1232ms] [LOG] [auto-scroll] attach effect {hasEl: false, itemCount: 0} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    7324ms] [LOG] [auto-scroll] attach effect {hasEl: true, itemCount: 30} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[    7336ms] [LOG] [auto-scroll] evaluateScrollPosition fired {distance: 0, atBottom: true} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   14546ms] [LOG] [auto-scroll] evaluateScrollPosition fired {distance: 1433, atBottom: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   26729ms] [ERROR] Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `MessageList`.  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[   26742ms] [LOG] [auto-scroll] layout effect {prev: 6a888f69e5d6aac97523cd85, lastItemId: null, itemAdded: false, isAtBottom: false} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   26745ms] [LOG] [auto-scroll] attach effect {hasEl: true, itemCount: 31} @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   81206ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   81283ms] [LOG] [Fast Refresh] done in 27ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  131947ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=-hi9XyXlpi_ylBXnPNxHl' failed:  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  131947ms] [ERROR] WebSocket connection to 'wss://frontend-task-chatapp.onrender.com/socket.io/?EIO=4&transport=websocket&sid=2CeSDKhoMro7MKnDAClS' failed:  @ http://localhost:3000/_next/static/chunks/node_modules_0-r49mq._.js:3046
+[  132951ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  132989ms] [LOG] [Fast Refresh] done in 27ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  146730ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=-hi9XyXlpi_ylBXnPNxHl' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  148827ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  149732ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[  149769ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776

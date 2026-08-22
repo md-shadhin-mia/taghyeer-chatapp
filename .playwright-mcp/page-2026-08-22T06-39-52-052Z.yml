@@ -1,0 +1,60 @@
+- generic [ref=f6e1]:
+  - generic [ref=f6e2]:
+    - region "What Taghyeer Chat does" [ref=f6e4]:
+      - generic [ref=f6e5]: Taghyeer Chat
+      - generic [ref=f6e7]:
+        - heading "Conversations that keep up with you." [level=2] [ref=f6e8]:
+          - generic [ref=f6e10]: Conversations
+          - generic [ref=f6e11]: that
+          - generic [ref=f6e12]: keep
+          - generic [ref=f6e13]: up
+          - generic [ref=f6e14]: with
+          - generic [ref=f6e15]: you.
+        - generic [ref=f6e17]:
+          - heading "Messages land instantly" [level=3] [ref=f6e21]:
+            - generic [ref=f6e23]: Messages
+            - generic [ref=f6e24]: land
+            - generic [ref=f6e25]: instantly
+          - paragraph [ref=f6e26]:
+            - generic [ref=f6e27]: A live Socket.IO connection pushes every message the moment it is sent — no refresh, no polling delay.
+            - generic [ref=f6e28]: A
+            - generic [ref=f6e29]: live
+            - generic [ref=f6e30]: Socket.IO
+            - generic [ref=f6e31]: connection
+            - generic [ref=f6e32]: pushes
+            - generic [ref=f6e33]: every
+            - generic [ref=f6e34]: message
+            - generic [ref=f6e35]: the
+            - generic [ref=f6e36]: moment
+            - generic [ref=f6e37]: it
+            - generic [ref=f6e38]: is
+            - generic [ref=f6e39]: sent
+            - generic [ref=f6e40]: —
+            - generic [ref=f6e41]: "no"
+            - generic [ref=f6e42]: refresh,
+            - generic [ref=f6e43]: "no"
+            - generic [ref=f6e44]: polling
+            - generic [ref=f6e45]: delay.
+        - generic [ref=f6e46]:
+          - 'button "Show feature: Messages land instantly" [ref=f6e47]'
+          - 'button "Show feature: Groups you actually control" [ref=f6e48]'
+          - 'button "Show feature: Never miss a reply" [ref=f6e49]'
+          - 'button "Show feature: Honest about the network" [ref=f6e50]'
+      - paragraph [ref=f6e51]: Built with Next.js, React Query and Socket.IO.
+    - generic [ref=f6e53]:
+      - generic [ref=f6e54]:
+        - heading "Welcome back" [level=1] [ref=f6e55]
+        - paragraph [ref=f6e56]: Enter your name and phone number to continue. New here? We'll create your account automatically.
+        - generic [ref=f6e57]:
+          - generic [ref=f6e58]:
+            - generic [ref=f6e59]: Full name
+            - textbox "Full name" [active] [ref=f6e60]:
+              - /placeholder: e.g. Rafi Ahmed
+          - generic [ref=f6e61]:
+            - generic [ref=f6e62]: Phone number
+            - textbox "Phone number" [ref=f6e63]:
+              - /placeholder: "+8801712345678"
+          - button "Continue" [ref=f6e64]
+      - paragraph [ref=f6e65]: By continuing you agree to be reachable at the phone number provided.
+  - button "Open Next.js Dev Tools" [ref=f6e71] [cursor=pointer]
+  - alert [ref=f6e75]

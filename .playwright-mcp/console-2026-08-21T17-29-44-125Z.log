@@ -1,0 +1,12 @@
+[     150ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[     179ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:776
+[   36140ms] [ERROR] Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+
+Check the render method of `MessageList`.  @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1e8vcs8._.js:1052
+[  115947ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  116948ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  117950ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  118951ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  119953ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  124954ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348
+[  129956ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=6fTQi2-dCW8An61UM1YHY' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_0_90u2t._.js:16348

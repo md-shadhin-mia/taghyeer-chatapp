@@ -1,0 +1,1 @@
+[   39367ms] [ERROR] WebSocket connection to 'wss://frontend-task-chatapp.onrender.com/socket.io/?EIO=4&transport=websocket&sid=QQw2DJwuM26Qn6I5ACi7' failed:  @ http://localhost:3000/_next/static/chunks/3jcw1ueqxqtr-.js:0

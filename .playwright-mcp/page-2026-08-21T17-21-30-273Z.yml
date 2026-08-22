@@ -1,0 +1,13 @@
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e9] [cursor=pointer]
+  - alert [ref=e13]
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: Chats
+        - button "Sign out" [ref=e18]
+      - button "+ New Chat" [ref=e19]:
+        - generic [ref=e20]: +
+        - text: New Chat
+      - paragraph [ref=e22]: Loading conversations...
+    - paragraph [ref=e24]: Select a conversation or start a new one.
