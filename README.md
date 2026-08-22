@@ -80,8 +80,6 @@ Scrolls to bottom on load, auto-scrolls on new messages only if already near bot
 
 ## Landing page design rationale
 
-*Explain the reasoning behind your visual and UX design choices for the landing page (layout, color palette, typography, interactions).*
-
 The page is built to demonstrate the product live rather than describe it in prose.
 
 - **Layout**: Two-column hero (copy left, live device mockup right) so the realtime demo sits next to the pitch instead of below the fold.
