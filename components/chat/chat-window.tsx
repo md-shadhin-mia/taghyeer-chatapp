@@ -29,7 +29,9 @@ export function ChatWindow({
   const [isGroupInfoOpen, setIsGroupInfoOpen] = useState(false);
 
   return (
-    <div className={`min-w-0 flex-1 flex-col overflow-hidden ${className ?? ""}`}>
+    <div
+      className={`min-w-0 flex-1 flex-col overflow-hidden rounded-xl border border-border-subtle bg-surface ${className ?? ""}`}
+    >
       {conversation ? (
         <ChatWindowContent
           key={conversation._id}

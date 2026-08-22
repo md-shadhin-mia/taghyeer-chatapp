@@ -59,9 +59,9 @@ export function MessageComposer({
         type="submit"
         disabled={isOffline || !text.trim()}
         aria-label="Send message"
-        className="flex-shrink-0 rounded-lg bg-accent-to px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
+        className="flex flex-shrink-0 items-center gap-1.5 rounded-lg bg-accent-to px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40"
       >
-        Send
+        Send <span aria-hidden>→</span>
       </button>
     </form>
   );

@@ -9,7 +9,7 @@ const PALETTE = [
   "#06b6d4",
 ];
 
-function colorFor(name: string): string {
+export function colorForName(name: string): string {
   let hash = 0;
   for (let i = 0; i < name.length; i++) {
     hash = (hash << 5) - hash + name.charCodeAt(i);
@@ -27,15 +27,26 @@ export function Avatar({
   size?: number;
   className?: string;
 }) {
-  const initial = name.trim().charAt(0).toUpperCase() || "?";
+  const initials =
+    name
+      .trim()
+      .split(/\s+/)
+      .slice(0, 2)
+      .map((word) => word.charAt(0).toUpperCase())
+      .join("") || "?";
 
   return (
     <div
-      className={`flex flex-shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white ${className ?? ""}`}
-      style={{ width: size, height: size, backgroundColor: colorFor(name || "?") }}
+      className={`flex flex-shrink-0 items-center justify-center rounded-full font-semibold text-white ${className ?? ""}`}
+      style={{
+        width: size,
+        height: size,
+        backgroundColor: colorForName(name || "?"),
+        fontSize: Math.max(10, Math.round(size * 0.34)),
+      }}
       aria-hidden
     >
-      {initial}
+      {initials}
     </div>
   );
 }

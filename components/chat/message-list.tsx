@@ -3,7 +3,7 @@
 import type { RefObject } from "react";
 import { MessageBubble } from "./message-bubble";
 import { formatDateDivider, isSameCalendarDay } from "@/utils/date";
-import { senderNameIn } from "@/utils/conversation";
+import { conversationTitle, senderNameIn } from "@/utils/conversation";
 import type { ClientMessage } from "@/types/message";
 import type { Conversation } from "@/types/conversation";
 
@@ -53,7 +53,7 @@ export function MessageList({
   if (messages.length === 0) {
     return (
       <div className="flex flex-1 items-center justify-center px-6 text-center">
-        <p className="text-sm text-muted">No messages yet. Say hello!</p>
+        <p className="text-sm text-muted">Say hello to {conversationTitle(conversation)}!</p>
       </div>
     );
   }

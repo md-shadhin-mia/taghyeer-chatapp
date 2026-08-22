@@ -10,8 +10,7 @@ export function Wordmark({ className }: { className?: string }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      Taghyeer
-      <span className="sr-only">Chat</span>
+      Taghyeer <span className="font-semibold">Chat</span>
     </motion.span>
   );
 }

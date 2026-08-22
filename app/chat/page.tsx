@@ -13,7 +13,7 @@ import type { NewChatTab } from "@/components/chat/start-chat-panel";
 import { ChatWindow } from "@/components/chat/chat-window";
 import { NotificationsPanel } from "@/components/chat/notifications-panel";
 import { ToastStack } from "@/components/feedback/toast-stack";
-import { IconRail } from "@/components/layout/icon-rail";
+import { IconRail, type ConversationFilter } from "@/components/layout/icon-rail";
 import { TopBar } from "@/components/layout/top-bar";
 
 export default function ChatPage() {
@@ -25,6 +25,7 @@ export default function ChatPage() {
   const [newChatTab, setNewChatTab] = useState<NewChatTab>("direct");
   const [searchQuery, setSearchQuery] = useState("");
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [conversationFilter, setConversationFilter] = useState<ConversationFilter>("all");
 
   const markRead = useUnreadStore((state) => state.markRead);
   const prune = useUnreadStore((state) => state.prune);
@@ -88,16 +89,13 @@ export default function ChatPage() {
       <IconRail
         userName={user.name}
         onSignOut={logout}
-        unreadTotal={unreadTotal}
-        isNotificationsOpen={isNotificationsOpen}
-        onToggleNotifications={() => setIsNotificationsOpen((open) => !open)}
+        activeFilter={conversationFilter}
+        onFilterChange={setConversationFilter}
       />
 
       <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
         <TopBar
           userName={user.name}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
           onSignOut={logout}
           unreadTotal={unreadTotal}
           isNotificationsOpen={isNotificationsOpen}
@@ -127,6 +125,7 @@ export default function ChatPage() {
             onConversationStarted={handleConversationStarted}
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
+            filter={conversationFilter}
             className={
               showChatOnMobile
                 ? "hidden flex-1 md:flex md:flex-none"
