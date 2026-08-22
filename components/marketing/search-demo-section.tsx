@@ -11,7 +11,7 @@ export function SearchDemoSection() {
           </h2>
           <p className="max-w-md text-muted">
             No usernames to remember. Look someone up by phone number and jump
-            straight into a conversation — or add them to a new group.
+            straight into a conversation-or add them to a new group.
           </p>
         </div>
 

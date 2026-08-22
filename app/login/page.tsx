@@ -27,7 +27,7 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-dvh flex-1 lg:grid lg:grid-cols-[1.1fr_minmax(0,520px)] xl:grid-cols-[1.25fr_minmax(0,560px)]">
-      {/* Desktop-only marketing column — on mobile the form is the whole page. */}
+      {/* Desktop-only marketing column-on mobile the form is the whole page. */}
       <div className="hidden border-r border-border-subtle bg-background lg:block">
         <FeatureShowcase />
       </div>
@@ -39,7 +39,7 @@ export default function LoginPage() {
         />
 
         <div className="relative w-full max-w-md">
-          {/* Wordmark + tagline only on mobile — on desktop the showcase column
+          {/* Wordmark + tagline only on mobile-on desktop the showcase column
               already carries the brand, and the card has its own heading. */}
           <div className="mb-8 flex flex-col items-center gap-2 text-center lg:hidden">
             <Wordmark className="text-3xl" />

@@ -50,7 +50,7 @@ export function MessageComposer({
         onChange={(e) => setText(e.target.value)}
         onKeyDown={handleKeyDown}
         rows={1}
-        placeholder={isOffline ? "You're offline — reconnecting…" : "Type a message…"}
+        placeholder={isOffline ? "You're offline-reconnecting…" : "Type a message…"}
         aria-label="Message"
         disabled={isOffline}
         className="max-h-32 flex-1 resize-none rounded-lg border border-border-subtle bg-inset px-3 py-2 text-sm outline-none scrollbar-none transition-colors focus:border-accent-to disabled:cursor-not-allowed disabled:opacity-60"

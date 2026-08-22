@@ -21,7 +21,7 @@ export function useUnreadDocumentTitle() {
     apply();
 
     // React owns the route's <title> element and re-applies it after hydration,
-    // which silently overwrites a plain `document.title` assignment — the count
+    // which silently overwrites a plain `document.title` assignment-the count
     // would then never appear on a reload. Re-assert it whenever <head> changes.
     const observer = new MutationObserver(apply);
     observer.observe(document.head, { childList: true, subtree: true, characterData: true });

@@ -6,26 +6,30 @@ import { Wordmark } from "@/components/ui/wordmark";
 
 const FEATURES = [
   {
-    title: "Instant delivery",
-    body: "Messages land the moment they're sent, with live status when they don't.",
+    title: "Performance",
+    body: "Built to feel instant-optimistic sends, snappy loads, zero waiting around.",
   },
   {
-    title: "Group conversations",
-    body: "Spin up a group, promote admins, and manage members on the fly.",
+    title: "Instant messages",
+    body: "Messages land the moment they're sent, live over sockets-no refresh, ever.",
   },
   {
-    title: "Always know where you stand",
-    body: "Connection status is never a mystery — you'll see it the instant it changes.",
+    title: "Group chat",
+    body: "Spin up a group in seconds and bring the whole crew into one thread.",
   },
   {
-    title: "Search by phone number",
-    body: "Find anyone and start chatting without hunting for a username.",
+    title: "Polished UI",
+    body: "A refined dark interface with careful loading, empty, and error states.",
+  },
+  {
+    title: "Admin control on groups",
+    body: "Rename groups, add or remove members, and promote admins on the fly.",
   },
 ];
 
 const ROTATE_MS = 4200;
 
-/** Static, purely decorative conversation snippet — no timers, no live data. */
+/** Static, purely decorative conversation snippet-no timers, no live data. */
 function ChatPreview() {
   return (
     <div
@@ -43,14 +47,14 @@ function ChatPreview() {
         </div>
       </div>
       <div className="space-y-2">
-        <div className="w-fit max-w-[75%] rounded-2xl rounded-bl-sm bg-surface-elevated px-3 py-1.5 text-xs">
+        <div className="w-fit max-w-[75%] animate-hero-message-in rounded-2xl rounded-bl-sm bg-surface-elevated px-3 py-1.5 text-xs [animation-delay:0.15s]">
           Kemon acho? Cholo aj plan kori 🎉
         </div>
-        <div className="ml-auto w-fit max-w-[75%] rounded-2xl rounded-br-sm bg-accent-to px-3 py-1.5 text-xs text-white">
+        <div className="ml-auto w-fit max-w-[75%] animate-hero-message-in rounded-2xl rounded-br-sm bg-accent-to px-3 py-1.5 text-xs text-white [animation-delay:0.45s]">
           Obosshoi! Group banai ekhon
         </div>
-        <div className="w-fit max-w-[75%] rounded-2xl rounded-bl-sm bg-surface-elevated px-3 py-1.5 text-xs">
-          Perfect — invite pathao 👌
+        <div className="w-fit max-w-[75%] animate-hero-message-in rounded-2xl rounded-bl-sm bg-surface-elevated px-3 py-1.5 text-xs [animation-delay:0.75s]">
+          Perfect-invite pathao 👌
         </div>
       </div>
     </div>
@@ -71,7 +75,7 @@ export function FeatureShowcase() {
   }, [paused]);
 
   const feature = FEATURES[index];
-  const duration = prefersReducedMotion ? 0 : 0.35;
+  const duration = prefersReducedMotion ? 0 : 0.5;
 
   return (
     <div
@@ -93,18 +97,24 @@ export function FeatureShowcase() {
         <ChatPreview />
 
         <div className="max-w-md">
-          <AnimatePresence mode="wait">
+          {/* min-height fits the tallest slide (two-line title + body) so the
+              dots below don't jump as titles of different lengths rotate. */}
+          <div className="min-h-40">
+            <AnimatePresence mode="wait">
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
+              initial={{ opacity: 0, y: 16, filter: "blur(12px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -16, filter: "blur(10px)" }}
               transition={{ duration, ease: "easeOut" }}
             >
-              <h2 className="mb-3 text-3xl font-semibold tracking-tight">{feature.title}</h2>
+              <h2 className="mb-3 text-4xl font-semibold tracking-tight text-balance xl:text-5xl">
+                {feature.title}
+              </h2>
               <p className="text-muted">{feature.body}</p>
             </motion.div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
 
           <div className="mt-8 flex gap-2">
             {FEATURES.map((item, i) => (

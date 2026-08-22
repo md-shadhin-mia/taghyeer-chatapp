@@ -44,7 +44,7 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* Scrollbars — the platform default is a light, chunky bar that fights the dark
+/* Scrollbars-the platform default is a light, chunky bar that fights the dark
    surfaces. Style every scroll container globally (message list, sidebar, modals,
    member lists, the composer textarea) so they read as part of the UI.
    Kept in @layer base so utilities like scrollbar-none can override them —
@@ -97,7 +97,7 @@ body {
   --animate-sending-dot: sending-dot 1.1s infinite ease-in-out;
 
   /* One-shot entrance for a message that arrived while the chat was open.
-     Only opacity/transform — never layout properties — so the scroll math in
+     Only opacity/transform-never layout properties-so the scroll math in
      use-auto-scroll.ts (which reads scrollHeight) is unaffected. */
   --animate-message-pop: message-pop 0.18s ease-out;
 
@@ -114,19 +114,27 @@ body {
     }
   }
 
-  /* Landing page: the dot travelling along the realtime-section connector. */
-  --animate-connector-travel: connector-travel 1.1s ease-in-out forwards;
+  /* Landing page: the dot travelling along the realtime-section connector.
+     Loops forever so the demo is alive whenever the section is on screen, and
+     animates `left` in % (not translateX) so it spans the flex-sized line. */
+  --animate-connector-travel: connector-travel 1.8s ease-in-out infinite;
 
   /* Landing page: blinking caret in the scripted search demo. */
   --animate-caret-blink: caret-blink 1s steps(1) infinite;
 
   @keyframes connector-travel {
-    from {
-      transform: translateX(0);
+    0% {
+      left: 0%;
+      opacity: 0;
+    }
+    12% {
       opacity: 1;
     }
-    to {
-      transform: translateX(112px);
+    82% {
+      opacity: 1;
+    }
+    100% {
+      left: calc(100% - 0.5rem);
       opacity: 0;
     }
   }
@@ -138,6 +146,35 @@ body {
     }
     50% {
       opacity: 0;
+    }
+  }
+
+  /* Landing hero: gentle float on the 3D device mockups (same keyframes,
+     offset phase so the laptop and phone drift independently). */
+  --animate-hero-float: hero-float 7s ease-in-out infinite;
+  --animate-hero-float-phone: hero-float 5.5s ease-in-out 1.2s infinite;
+
+  /* Landing hero: springy bubble entrance for the scripted transcript. */
+  --animate-hero-message-in: hero-message-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes hero-message-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
   }
 
@@ -169,6 +206,15 @@ body {
   }
 
   .animate-caret-blink {
+    animation: none;
+  }
+
+  .animate-hero-float,
+  .animate-hero-float-phone {
+    animation: none;
+  }
+
+  .animate-hero-message-in {
     animation: none;
   }
 }

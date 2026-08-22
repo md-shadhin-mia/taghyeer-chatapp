@@ -33,7 +33,7 @@ export function MessageBubble({
         )}
 
         <div
-          className={`animate-message-pop whitespace-pre-wrap break-words rounded-2xl px-3.5 py-2 text-sm ${
+          className={`animate-message-pop whitespace-pre-wrap break-words rounded-lg px-3.5 py-2 text-sm ${
             isOwnMessage
               ? `bg-accent-to text-white ${isFailed ? "opacity-60" : ""}`
               : "bg-surface-elevated text-foreground"

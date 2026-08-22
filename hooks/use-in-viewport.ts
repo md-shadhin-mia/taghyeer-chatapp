@@ -13,7 +13,7 @@ interface UseInViewportOptions {
  * need: their timers must stop the moment they scroll offscreen and resume when
  * they come back.
  *
- * Also doubles as a client-only gate — it can only ever be `true` after mount,
+ * Also doubles as a client-only gate-it can only ever be `true` after mount,
  * so anything rendered behind it (e.g. demo messages stamped with `Date.now()`)
  * never renders during SSR and cannot cause a hydration mismatch.
  */

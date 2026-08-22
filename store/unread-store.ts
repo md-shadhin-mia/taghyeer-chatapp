@@ -23,7 +23,7 @@ interface UnreadState {
 
 /**
  * Client-side unread tracking. The API exposes no unread count, no read state
- * on a message, and no event other than `message:new` — but that event reaches
+ * on a message, and no event other than `message:new`-but that event reaches
  * every participant regardless of what they have open, so everything here is
  * derived from it without a single extra request.
  */
@@ -89,7 +89,7 @@ export const useUnreadStore = create<UnreadState>()(
       name: UNREAD_STORAGE_KEY,
       storage: createJSONStorage(() => localStorage),
       partialize: (state) => ({ entries: state.entries }),
-      // Same manual-rehydration approach as `auth-store` — never touch
+      // Same manual-rehydration approach as `auth-store`-never touch
       // localStorage during SSR (see AppProviders).
       skipHydration: true,
     },
@@ -106,7 +106,7 @@ export function selectTotalUnread(state: UnreadState): number {
 
 /**
  * True when a conversation's newest message post-dates the last time you opened
- * it — the only unread signal available for messages that arrived while the app
+ * it-the only unread signal available for messages that arrived while the app
  * was closed, where the exact count can't be known without refetching threads.
  */
 export function hasUnseenSince(

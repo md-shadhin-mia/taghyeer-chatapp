@@ -88,7 +88,7 @@ socket.emit(
 
 #### Acknowledgement
 
-The ack is a bare status object — it does **not** contain the created message:
+The ack is a bare status object-it does **not** contain the created message:
 
 ```json
 { "ok": true }
@@ -124,7 +124,7 @@ Fired when a group you're in changes (created, renamed, members/admins).
 
 #### Example
 
-Observed payload (note: **no** `createdAt`, `updatedAt`, or `lastMessage` — see quirks):
+Observed payload (note: **no** `createdAt`, `updatedAt`, or `lastMessage`-see quirks):
 
 ```json
 {
@@ -141,7 +141,7 @@ Observed payload (note: **no** `createdAt`, `updatedAt`, or `lastMessage` — se
 ```
 
 Fires on group creation, rename, member add/remove, and admin promotion. **Every**
-participant receives it — including the person who made the change, and including a
+participant receives it-including the person who made the change, and including a
 member who was just removed (their own id is simply absent from `participants`,
 which is how a client detects "I was removed").
 
@@ -185,7 +185,7 @@ Log in or register with a phone number and name.
 
 ### Errors
 
-Missing `name` — `400 VALIDATION_ERROR`:
+Missing `name`-`400 VALIDATION_ERROR`:
 
 ```json
 {
@@ -225,7 +225,7 @@ Authorization: Bearer <token>
 
 ### Errors
 
-No token — `400 NO_TOKEN`:
+No token-`400 NO_TOKEN`:
 
 ```json
 {
@@ -396,7 +396,7 @@ Authorization: Bearer <token>
 
 ### Errors
 
-Unknown conversation id — `404 NOT_FOUND`:
+Unknown conversation id-`404 NOT_FOUND`:
 
 ```json
 {
@@ -449,7 +449,7 @@ Create a group conversation.
 
 ### Errors
 
-Wrong field name (`memberIds` instead of `participantIds`) — `400 VALIDATION_ERROR`:
+Wrong field name (`memberIds` instead of `participantIds`)-`400 VALIDATION_ERROR`:
 
 ```json
 {
@@ -597,7 +597,7 @@ Group object with updated `name`.
 
 ### Errors
 
-Non-admin tries to rename — `403 FORBIDDEN`:
+Non-admin tries to rename-`403 FORBIDDEN`:
 
 ```json
 {
@@ -669,17 +669,17 @@ GET /health
 
 ## Observed quirks / bugs
 
-- **`message:new` does not match the REST message shape.** The socket sends `id` (not `_id`) and `createdAt` as epoch milliseconds (not an ISO string) — the example under [WebSocket](#websocket-socketio) above shows the REST shape and is inaccurate. Observed payload:
+- **`message:new` does not match the REST message shape.** The socket sends `id` (not `_id`) and `createdAt` as epoch milliseconds (not an ISO string)-the example under [WebSocket](#websocket-socketio) above shows the REST shape and is inaccurate. Observed payload:
   ```json
   { "id": "6a88a942...", "conversation": "6a88a820...", "sender": "6a8869c7...", "text": "hi", "createdAt": 1787341122570 }
   ```
   Normalize before use, or `_id`-based dedup silently fails and messages duplicate against their REST copies. Handled by `normalizeSocketMessage` in `utils/messages.ts`.
 - `POST /conversations/group` enforces **at least 3 total members**. `participantIds` excludes the creator, so it must contain 2+ ids; 1 id returns `400 VALIDATION_ERROR` with `"a group needs at least 3 members"`.
-- **`conversation:updated` omits `updatedAt`, `createdAt` and `lastMessage`.** It sends only `_id`, `type`, `name`, `createdBy`, `admins` and `participants` — the documented example above previously showed timestamp fields the server does not send. A client that writes the payload straight into a cached conversation list therefore blanks the sidebar preview and puts `NaN` into any `updatedAt` sort. Merge with the existing copy instead (`normalizeSocketConversation` in `utils/conversation.ts`). Unlike `message:new`, the id field *is* `_id`.
-- **A removed member still receives `conversation:updated`** for the group they were removed from, with themselves missing from `participants` — verified with four sockets. Leaving voluntarily behaves the same way.
-- **The sender never receives their own `message:new`.** Verified with three sockets (two for the sender, one for the recipient): only the recipient is notified — on socket sends *and* REST sends, and not even in the sender's own second tab. A client must therefore update its own view from the send result, not from the socket.
+- **`conversation:updated` omits `updatedAt`, `createdAt` and `lastMessage`.** It sends only `_id`, `type`, `name`, `createdBy`, `admins` and `participants`-the documented example above previously showed timestamp fields the server does not send. A client that writes the payload straight into a cached conversation list therefore blanks the sidebar preview and puts `NaN` into any `updatedAt` sort. Merge with the existing copy instead (`normalizeSocketConversation` in `utils/conversation.ts`). Unlike `message:new`, the id field *is* `_id`.
+- **A removed member still receives `conversation:updated`** for the group they were removed from, with themselves missing from `participants`-verified with four sockets. Leaving voluntarily behaves the same way.
+- **The sender never receives their own `message:new`.** Verified with three sockets (two for the sender, one for the recipient): only the recipient is notified-on socket sends *and* REST sends, and not even in the sender's own second tab. A client must therefore update its own view from the send result, not from the socket.
 - **`message:send` acks with `{ ok: true }` / `{ ok: false, error }`,** never the created message. `POST /messages` is the only way to obtain the canonical message in one round trip.
-- **The server does not validate message text.** `message:send` with `text: ""` — or with the `text` field omitted entirely — acks `{ ok: true }` and broadcasts a `message:new` whose `text` is empty/undefined. Client-side validation is the only guard.
-- `GET /users/search?q=+8801...` (leading `+`) returns `500` — unescaped regex bug. Search without `+`.
+- **The server does not validate message text.** `message:send` with `text: ""`-or with the `text` field omitted entirely-acks `{ ok: true }` and broadcasts a `message:new` whose `text` is empty/undefined. Client-side validation is the only guard.
+- `GET /users/search?q=+8801...` (leading `+`) returns `500`-unescaped regex bug. Search without `+`.
 - `before` cursor on message history is inclusive, not exclusive.
 - `GET /auth/me` with no token returns `400 NO_TOKEN`, not `401`.

@@ -12,7 +12,7 @@ export function useMessages(token: string | null, conversationId: string | null)
   const messagesQuery = useQuery({
     queryKey: queryKeys.messages(token, conversationId),
     // Normalize inside queryFn (not `select`) so the cache itself holds a plain
-    // ClientMessage[] — `select` only transforms what's read, not what's stored,
+    // ClientMessage[]-`select` only transforms what's read, not what's stored,
     // and use-socket.ts/use-send-message.ts patch the raw cache directly.
     queryFn: async () => {
       const result = await getMessages(token as string, conversationId as string, {

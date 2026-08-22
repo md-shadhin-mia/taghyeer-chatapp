@@ -1,4 +1,10 @@
+import { Reveal } from "@/components/marketing/reveal";
+
 const FEATURES = [
+  {
+    title: "Performance",
+    body: "Optimistic sends and cached conversations make every action feel instant.",
+  },
   {
     title: "Works everywhere",
     body: "A responsive layout that feels native on desktop and mobile alike.",
@@ -6,10 +12,6 @@ const FEATURES = [
   {
     title: "Never lose track",
     body: "Unread counts follow you to the tab title and a notifications panel.",
-  },
-  {
-    title: "Built for accessibility",
-    body: "Semantic markup, visible focus states, and full keyboard support.",
   },
   {
     title: "Fails gracefully",
@@ -23,7 +25,7 @@ export function ShowcaseSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col gap-3 text-center">
           <span className="text-xs font-medium uppercase tracking-wide text-accent-hover">
-            Built to last
+            Polished UI
           </span>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Polished where it counts.
@@ -31,14 +33,13 @@ export function ShowcaseSection() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURES.map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-2xl border border-border-subtle bg-surface p-6"
-            >
-              <h3 className="mb-2 text-sm font-semibold">{feature.title}</h3>
-              <p className="text-sm text-muted">{feature.body}</p>
-            </div>
+          {FEATURES.map((feature, i) => (
+            <Reveal key={feature.title} delay={i * 0.1}>
+              <div className="h-full rounded-2xl border border-border-subtle bg-surface p-6 transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1 hover:border-accent-to/40 hover:shadow-[0_12px_32px_-16px_rgba(59,130,246,0.35)] motion-reduce:transform-none">
+                <h3 className="mb-2 text-sm font-semibold">{feature.title}</h3>
+                <p className="text-sm text-muted">{feature.body}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -3,11 +3,11 @@ import { create } from "zustand";
 /**
  * Global connectivity, assembled from three independent signals:
  *
- * - `browserOnline`   — the browser's own online/offline events (instant, but
+ * - `browserOnline`  -the browser's own online/offline events (instant, but
  *                       only knows about the local link, not the server).
- * - `serverReachable` — the `/health` poll in `use-global-health.ts` (catches a
+ * - `serverReachable`-the `/health` poll in `use-global-health.ts` (catches a
  *                       sleeping/failing API while the laptop is happily on wifi).
- * - `socketConnected` — the Socket.IO connection in `use-socket.ts`.
+ * - `socketConnected`-the Socket.IO connection in `use-socket.ts`.
  *
  * The first two gate sending, since both mean a REST write would fail. The third
  * only degrades realtime delivery: history and sending still work over REST, so

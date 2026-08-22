@@ -28,7 +28,7 @@ export function isSocketConnected(): boolean {
 }
 
 // The server acknowledges `message:send` with `{ ok: true }` or
-// `{ ok: false, error }` — it never returns the created message (see API.md).
+// `{ ok: false, error }`-it never returns the created message (see API.md).
 interface SendAck {
   ok: boolean;
   error?: string;
@@ -39,7 +39,7 @@ const SEND_ACK_TIMEOUT_MS = 10_000;
 /**
  * Why the caller must care which of these happened: a `rejected` send is
  * definitively not stored, so retrying it elsewhere is safe. A `timeout` is
- * ambiguous — the server may well have processed the emit and broadcast it —
+ * ambiguous-the server may well have processed the emit and broadcast it —
  * so it must never be silently retried over REST, or the message duplicates.
  */
 export class SocketSendError extends Error {

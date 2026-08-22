@@ -14,7 +14,7 @@ export function useGroupManagement(token: string | null, conversationId: string)
   const queryClient = useQueryClient();
 
   // Every endpoint returns the updated group, so swap it into the cached list
-  // directly — instant, and no refetch flash. Members other than the actor get
+  // directly-instant, and no refetch flash. Members other than the actor get
   // the same update over the socket (`conversation:updated` → invalidate).
   function applyUpdatedGroup(group: GroupConversation) {
     queryClient.setQueryData<Conversation[]>(queryKeys.conversations(token), (old = []) =>
@@ -22,7 +22,7 @@ export function useGroupManagement(token: string | null, conversationId: string)
     );
   }
 
-  // Leaving removes the conversation from *our* list entirely — patching it in
+  // Leaving removes the conversation from *our* list entirely-patching it in
   // place would leave a group we're no longer part of sitting in the sidebar.
   function dropConversation() {
     queryClient.setQueryData<Conversation[]>(queryKeys.conversations(token), (old = []) =>

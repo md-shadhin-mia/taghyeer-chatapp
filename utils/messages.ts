@@ -2,7 +2,7 @@ import type { ClientMessage, Message, SocketMessagePayload } from "@/types/messa
 
 // Realtime payloads arrive in a different shape than REST ones (`id` vs `_id`,
 // epoch-ms vs ISO). Converting at the boundary keeps that quirk out of the cache
-// and out of every consumer — and it's what makes `mergeMessage`'s `_id` dedup
+// and out of every consumer-and it's what makes `mergeMessage`'s `_id` dedup
 // work at all, since an undefined `_id` never matches an existing message.
 export function normalizeSocketMessage(payload: SocketMessagePayload): Message {
   return {
@@ -17,7 +17,7 @@ export function normalizeSocketMessage(payload: SocketMessagePayload): Message {
   };
 }
 
-// The API's example response is newest-first — never trust wire order.
+// The API's example response is newest-first-never trust wire order.
 export function normalizeMessages(messages: Message[]): ClientMessage[] {
   return [...messages].sort(
     (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
@@ -41,8 +41,8 @@ export function mergeMessage(
 }
 
 // Defensive only, as of the current server: probing the live API showed the
-// sender never receives a `message:new` echo of their own message — not on the
-// sending socket, not in their other tabs, and not for REST sends either — so
+// sender never receives a `message:new` echo of their own message-not on the
+// sending socket, not in their other tabs, and not for REST sends either-so
 // nothing can currently race `onSuccess`'s reconciliation of the optimistic
 // entry. Kept because it costs one filter and is the difference between a
 // visible duplicate and none if the server ever starts echoing.

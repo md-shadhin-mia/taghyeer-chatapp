@@ -8,7 +8,7 @@ export interface Message {
 
 // The socket's `message:new` payload does NOT match the REST message shape:
 // it sends `id` instead of `_id`, and `createdAt` as epoch milliseconds instead
-// of an ISO string. (API.md documents it as identical to REST — it isn't.)
+// of an ISO string. (API.md documents it as identical to REST-it isn't.)
 // Normalize with `normalizeSocketMessage` before it reaches the cache.
 export interface SocketMessagePayload {
   _id?: string;
@@ -26,6 +26,6 @@ export type MessageStatus = "sending" | "sent" | "failed";
 
 export interface ClientMessage extends Message {
   status?: MessageStatus;
-  /** Why a `failed` send failed — the server's own wording where it gave one. */
+  /** Why a `failed` send failed-the server's own wording where it gave one. */
   error?: string;
 }

@@ -27,7 +27,7 @@ export function useSendMessage(token: string | null, currentUserId: string | und
      * Socket-first, REST fallback. The connected check happens *before* any
      * emit, which is what makes the fallback safe: REST is only ever used when
      * nothing was sent over the socket. Once an emit is in flight its errors
-     * propagate as-is — a rejection means the server refused it, and a timeout
+     * propagate as-is-a rejection means the server refused it, and a timeout
      * is ambiguous enough that retrying over REST could duplicate the message.
      *
      * Resolves to `null` on the socket path, since the ack returns no message.
@@ -62,7 +62,7 @@ export function useSendMessage(token: string | null, currentUserId: string | und
 
       queryClient.setQueryData<ClientMessage[]>(ctx.key, (old = []) =>
         serverMessage
-          ? // REST returned the canonical message — swap the optimistic entry for it.
+          ? // REST returned the canonical message-swap the optimistic entry for it.
             mergeMessage(
               old.filter((message) => message._id !== ctx.tempId),
               serverMessage,
@@ -75,7 +75,7 @@ export function useSendMessage(token: string | null, currentUserId: string | und
 
       // The sender never receives their own `message:new` (verified against the
       // live API), so nothing else would refresh the sidebar's preview text and
-      // ordering after sending — on either transport.
+      // ordering after sending-on either transport.
       queryClient.invalidateQueries({ queryKey: queryKeys.conversations(token) });
     },
 

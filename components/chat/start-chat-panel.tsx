@@ -115,7 +115,7 @@ export function StartChatPanel({
     e.preventDefault();
 
     // Fewer than MIN_GROUP_PARTICIPANTS other people means the server would
-    // reject the group (it enforces 3 total members) — fall back to a direct
+    // reject the group (it enforces 3 total members)-fall back to a direct
     // chat with the one selected person instead.
     if (selected.length < MIN_GROUP_PARTICIPANTS) {
       const only = selected[0];

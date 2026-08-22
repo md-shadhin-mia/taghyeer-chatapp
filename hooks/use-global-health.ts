@@ -15,7 +15,7 @@ const UNHEALTHY_POLL_MS = 5_000;
  *
  * Request-frugal by design: it skips the network entirely when the browser
  * already reports offline, pauses while the tab is hidden, and re-checks
- * immediately on `online` or on becoming visible again — so a backgrounded tab
+ * immediately on `online` or on becoming visible again-so a backgrounded tab
  * costs nothing and a foregrounded one is never stale.
  */
 export function useGlobalHealth() {

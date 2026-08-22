@@ -1,6 +1,6 @@
 import { HEALTH_URL } from "@/services/config";
 
-// A hung request is an outage as far as the user is concerned — cap it well
+// A hung request is an outage as far as the user is concerned-cap it well
 // under the healthy poll interval so a stalled check can never overlap the next.
 const HEALTH_TIMEOUT_MS = 8_000;
 

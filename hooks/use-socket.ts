@@ -37,7 +37,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
       invalidateConversations();
 
       // Only patch a conversation's message cache if that thread has already
-      // been opened this session — never seed a partial history here.
+      // been opened this session-never seed a partial history here.
       const key = queryKeys.messages(token, incoming.conversation);
       if (queryClient.getQueryData(key) !== undefined) {
         queryClient.setQueryData<ClientMessage[]>(key, (old = []) =>
@@ -65,7 +65,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
       const isWatching = isActive && document.visibilityState === "visible";
 
       if (isWatching) {
-        // You are looking straight at it — that counts as read.
+        // You are looking straight at it-that counts as read.
         useUnreadStore.getState().markRead(conversationId);
         return;
       }
@@ -91,7 +91,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
 
     /**
      * A group you're in changed: created, renamed, or members/admins edited.
-     * Every participant receives this — including the person who made the
+     * Every participant receives this-including the person who made the
      * change and, importantly, a member who was just removed (verified against
      * the live server), which is what makes the removal path reliable.
      *
@@ -106,7 +106,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
       );
       const group = normalizeSocketConversation(payload, existing);
 
-      // Unrecognizable payload — fall back to the old blunt-but-safe behaviour.
+      // Unrecognizable payload-fall back to the old blunt-but-safe behaviour.
       if (!group) {
         invalidateConversations();
         return;
@@ -130,7 +130,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
 
       if (!existing) {
         // Added to a group (or one you created). Insert it straight away for
-        // instant feedback, then refetch once — the event carries no
+        // instant feedback, then refetch once-the event carries no
         // `lastMessage`, so an existing group's preview would read as empty.
         queryClient.setQueryData<Conversation[]>(key, (old = []) => [group, ...old]);
         invalidateConversations();
@@ -142,7 +142,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
         old.map((conversation) => (conversation._id === group._id ? group : conversation)),
       );
 
-      // Announce only what affects you — other members coming and going is noise.
+      // Announce only what affects you-other members coming and going is noise.
       const previousName = existing.type === "group" ? existing.name : undefined;
       if (previousName && previousName !== group.name) {
         pushToast(group.name, `Renamed from "${previousName}"`, group._id);
@@ -155,24 +155,24 @@ export function useSocket(token: string | null, currentUserId: string | null) {
       }
     }
 
-    /** Toasts are pointless behind a hidden tab — they'd just pile up. */
+    /** Toasts are pointless behind a hidden tab-they'd just pile up. */
     function pushToast(title: string, body: string, conversationId?: string) {
       if (document.visibilityState !== "visible") return;
       useToastStore.getState().push({ conversationId, title, body });
     }
 
     // Realtime health feeds the global connection banner. A dropped socket only
-    // degrades delivery — REST sending still works — so it never blocks the
+    // degrades delivery-REST sending still works-so it never blocks the
     // composer; that is gated on the /health poll instead.
     function handleDisconnected() {
       setSocketConnected(false);
     }
 
-    // Socket.IO does not redeliver events missed while disconnected — recover
+    // Socket.IO does not redeliver events missed while disconnected-recover
     // from any gap by invalidating already-open conversations/messages caches
     // whenever the socket (re)connects. Cached data already exists for these
     // queries by the time a reconnect can happen, so this triggers a silent
-    // background refetch (isFetching, not isLoading) — no spinner flash.
+    // background refetch (isFetching, not isLoading)-no spinner flash.
     function handleConnect() {
       setSocketConnected(true);
       invalidateConversations();
@@ -192,7 +192,7 @@ export function useSocket(token: string | null, currentUserId: string | null) {
       socket.off("disconnect", handleDisconnected);
       socket.off("connect", handleConnect);
       disconnectSocket();
-      // Our own teardown is not an outage — don't leave a stale warning up.
+      // Our own teardown is not an outage-don't leave a stale warning up.
       setSocketConnected(true);
     };
   }, [token, currentUserId, queryClient, setSocketConnected]);

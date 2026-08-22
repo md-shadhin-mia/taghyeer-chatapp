@@ -7,9 +7,10 @@ import { SearchDemoSection } from "@/components/marketing/search-demo-section";
 import { ShowcaseSection } from "@/components/marketing/showcase-section";
 import { CtaSection } from "@/components/marketing/cta-section";
 import { LandingFooter } from "@/components/marketing/landing-footer";
+import { Reveal } from "@/components/marketing/reveal";
 
 export const metadata: Metadata = {
-  title: "Taghyeer Chat — Real-time messaging, reimagined.",
+  title: "Taghyeer Chat-Real-time messaging, reimagined.",
 };
 
 /**
@@ -22,13 +23,25 @@ export default function LandingPage() {
       <LandingNav />
       <main>
         <LandingHero />
-        <RealtimeSection />
-        <GroupsSection />
-        <SearchDemoSection />
-        <ShowcaseSection />
-        <CtaSection />
+        <Reveal>
+          <RealtimeSection />
+        </Reveal>
+        <Reveal>
+          <GroupsSection />
+        </Reveal>
+        <Reveal>
+          <SearchDemoSection />
+        </Reveal>
+        <Reveal>
+          <ShowcaseSection />
+        </Reveal>
+        <Reveal>
+          <CtaSection />
+        </Reveal>
       </main>
-      <LandingFooter />
+      <Reveal>
+        <LandingFooter />
+      </Reveal>
     </div>
   );
 }

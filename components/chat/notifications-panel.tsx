@@ -18,7 +18,7 @@ interface NotificationItem {
 }
 
 /**
- * One notification per conversation with something unseen — either messages
+ * One notification per conversation with something unseen-either messages
  * counted live this session (unread-store), or a `lastMessage` newer than the
  * last time the conversation was opened (arrived while the app was closed,
  * where only a dot can be shown since the exact count isn't knowable).

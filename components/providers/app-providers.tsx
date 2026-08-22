@@ -16,7 +16,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
 
   // Persisted stores use `skipHydration` so they never touch `localStorage`
-  // during server-side rendering — rehydrate manually once mounted on the client.
+  // during server-side rendering-rehydrate manually once mounted on the client.
   useEffect(() => {
     useAuthStore.persist.rehydrate();
     useUnreadStore.persist.rehydrate();

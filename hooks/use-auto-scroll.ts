@@ -33,10 +33,10 @@ export function useAutoScroll({ itemCount, lastItemId, resetKey }: UseAutoScroll
   }
 
   // Attach the scroll listener directly via addEventListener rather than
-  // JSX onScroll — React's synthetic scroll event does not reliably fire
+  // JSX onScroll-React's synthetic scroll event does not reliably fire
   // for every native scroll in all environments, so this bypasses that.
   // Depends on itemCount (not []) because the scrollable container only
-  // mounts once messages have loaded — while loading, MessageList renders
+  // mounts once messages have loaded-while loading, MessageList renders
   // a spinner instead, so scrollRef.current is still null at first mount.
   useEffect(() => {
     const el = scrollRef.current;
@@ -69,7 +69,7 @@ export function useAutoScroll({ itemCount, lastItemId, resetKey }: UseAutoScroll
     }
 
     // A transient render with no messages yet (e.g. a brief refetch window)
-    // must never overwrite the tracked id — otherwise the next real message
+    // must never overwrite the tracked id-otherwise the next real message
     // to arrive would be wrongly compared against `null` instead of the
     // last message actually seen, and this hook would silently forget it.
     if (lastItemId === null) return;

@@ -12,7 +12,7 @@ export function CtaSection() {
         </p>
         <Link
           href="/login"
-          className="rounded-full bg-accent-to px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+          className="rounded-full bg-accent-to px-6 py-3 text-sm font-medium text-white transition-[background-color,transform] duration-200 hover:scale-[1.04] hover:bg-accent-hover active:scale-[0.98] motion-reduce:transform-none"
         >
           Sign in to Taghyeer Chat
         </Link>

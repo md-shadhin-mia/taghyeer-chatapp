@@ -4,7 +4,7 @@ export function RealtimeSection() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
         <div className="flex flex-col gap-4">
           <span className="text-xs font-medium uppercase tracking-wide text-accent-hover">
-            Realtime delivery
+            Instant messages
           </span>
           <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Messages arrive the instant they&apos;re sent.
